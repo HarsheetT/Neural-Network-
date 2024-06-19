@@ -24,3 +24,19 @@ This allows the network to learn and produce the desired outputs over time.
 
 #### In short: We control the neuron's output by playing with its internal settings! ️
 </p>
+
+## Day 2 - Building a Neuron with NumPy and Class
+<p>
+Yesterday, we explored the inner workings of a neuron. Today, we'll see how to code it efficiently using Python's NumPy library and create a class to organize the neuron's components.
+<br>
+
+#### Simplifying with NumPy:
+We'll use numpy.dot() to perform the weighted sum of inputs and biases in a single line, making the code cleaner and faster.
+<br>
+
+#### Creating a Neuron Class:
+We'll define a Python class to encapsulate the neuron's weights, biases, and functionality. This class will include a forward method that calculates the neuron's output based on the input it receives.
+<br>
+
+By combining NumPy and a class, we'll create a more organized and efficient representation of a neuron, paving the way for building neural networks!
+</p>
