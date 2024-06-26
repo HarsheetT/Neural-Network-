@@ -1,9 +1,8 @@
 import numpy as np
-np.random.seed(0)
+import nnfs
+from nnfs.datasets import spiral_data   
 
-X = [[1,2,3,2.5],
-     [2.0,5.0,-1.0,2.0],
-     [-0.26,-0.27,0.17,-0.8]]
+nnfs.init()
 
 class Layer_Dense:
     def __init__ (self,n_inputs,n_neurons):
@@ -12,8 +11,34 @@ class Layer_Dense:
     def forward(self, inputs):
         self.output = np.dot(inputs, self.weights) + self.biases
 
-layer1 = Layer_Dense(4,5) #Layer_Dense(no.of_inputs,No.of_neurons to be created => Can be any number)
-layer2 = Layer_Dense(5,2) # Here 5 is the input cause it takes the previous outputs and mae them the inputs so the output in the previous ones are 5.   
+class Activation_ReLU:
+    def forward(self,inputs):
+        self.output = np.maximum(0,inputs)
 
-layer1.forward(X)
-layer2.forward(layer1.output)
+class Activation_Softmax:
+    def forward(self,inputs):
+        exp_values = np.exp(inputs - np.max(inputs,axis=1,keepdims=True))
+        probabilities = exp_values / np.sum(exp_values,axis=1,keepdims=True)
+        self.output = probabilities
+
+
+# layer1 = Layer_Dense(2,5)
+# activation1 = Activation_ReLU()
+
+
+
+
+X,y = spiral_data(samples=100,classes=3)
+
+dense1 = Layer_Dense(2,3)
+activation1 = Activation_ReLU()
+dense2 = Layer_Dense(3,3)
+activation2 = Activation_Softmax()
+
+dense1.forward(X)
+dense1_output = dense1.output
+activation1.forward(dense1_output)
+dense2.forward(activation1.output)
+activation2.forward(dense2.output)
+
+print(activation2.output[:5])
