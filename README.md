@@ -40,3 +40,28 @@ We'll define a Python class to encapsulate the neuron's weights, biases, and fun
 
 By combining NumPy and a class, we'll create a more organized and efficient representation of a neuron, paving the way for building neural networks!
 </p>
+
+## Day 3 - Activation_Functions and Loss
+
+<p>
+Today, we delve deeper into neural networks by exploring activation functions, calculating loss, and introducing the Softmax function.
+<br>
+
+#### Hidden Layer Activation Functions:
+
+##### Linear: While simple, linear activation functions might not capture complex relationships in data.
+<br>
+
+##### ReLU (Rectified Linear Unit): A popular choice, ReLU introduces non-linearity, allowing the network to learn more intricate patterns. However, it can cause issues with "dying neurons" due to its insensitivity to negative inputs.
+<br>
+
+#### Softmax: The Activation for Multi-Class Classification
+
+ReLU's limitation with negative numbers becomes crucial when dealing with multi-class classification problems. Here's where Softmax comes in.
+Softmax takes the output from the final hidden layer and transforms it into an array of probabilities between 0 and 1, where each element represents the probability of the input belonging to a specific class.
+<br>
+
+#### Calculating Loss: Categorical Cross Entropy
+To evaluate the performance of our network, we need to measure the difference between the predicted probabilities (from Softmax) and the actual labels.
+Categorical Cross Entropy is a common loss function used for multi-class classification. It quantifies this difference, guiding the network's learning process towards producing more accurate probability distributions.
+</P>
