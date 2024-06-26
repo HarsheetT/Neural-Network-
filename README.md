@@ -52,7 +52,8 @@ Today, we delve deeper into neural networks by exploring activation functions, c
 ##### Linear: While simple, linear activation functions might not capture complex relationships in data.
 <br>
 
-##### ReLU (Rectified Linear Unit): A popular choice, ReLU introduces non-linearity, allowing the network to learn more intricate patterns. However, it can cause issues with "dying neurons" due to its insensitivity to negative inputs.
+##### ReLU (Rectified Linear Unit): 
+A popular choice, ReLU introduces non-linearity, allowing the network to learn more intricate patterns. However, it can cause issues with "dying neurons" due to its insensitivity to negative inputs.
 <br>
 
 #### Softmax: The Activation for Multi-Class Classification
