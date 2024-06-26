@@ -49,7 +49,8 @@ Today, we delve deeper into neural networks by exploring activation functions, c
 
 #### Hidden Layer Activation Functions:
 
-##### Linear: While simple, linear activation functions might not capture complex relationships in data.
+##### Linear: 
+While simple, linear activation functions might not capture complex relationships in data.
 <br>
 
 ##### ReLU (Rectified Linear Unit): 
